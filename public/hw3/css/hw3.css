@@ -1,0 +1,43 @@
+/* HW3 – COSC 2328 – Professor McCurry
+   Implemented by: Gigi Kahlor */
+
+
+:root {
+  --bg-color-main: #F5F1ED;
+  --fontsize-default: 16px;
+  --border-radius: 10px;
+}
+
+body {
+  font-family: Verdana, monospace;
+  font-size: var(--fontsize-default);
+  background-color: var(--bg-color-main);
+  color: #252323;
+  margin: 0;
+  padding: 16px;
+  overflow: auto;
+}
+
+#name {
+  font-size: 64px;
+}
+
+.subhead {
+  font-size: 32px;
+}
+
+.subhead:hover {
+ color: #70798C;
+}
+
+.image-wrapper img {
+  width: 400px;
+  height: 300px;
+  padding: 10px;
+  border: 10px;
+  border-radius: var(--border-radius);
+  background-color: #DAD2BC;
+  box-shadow: 2px 2px gray;
+  margin: 0;
+}
+
