@@ -1,0 +1,61 @@
+/* HW4 – COSC 2328 – Professor McCurry
+   Implemented by: Gigi Kahlor */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+form {
+    margin: 2rem auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #29ae6b;
+    border-color: #29ae6b;
+    width: 100%;
+}
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="date"]:focus, 
+input[type="file"]:focus {
+    border-color: #04AA6D;
+    background-color: rgb(169, 193, 225); 
+}
+
+
+@media (min-width: 768px) {
+  .container { display: flex; gap: 2rem; }
+}
+
+img { max-width: 100%; height: auto; }

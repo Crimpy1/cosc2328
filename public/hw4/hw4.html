@@ -1,0 +1,56 @@
+<!-- HW4 – COSC 2328 – Professor McCurry
+     Implemented by: Gigi Kahlor -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/hw4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>FutureWeb 2026</h1>
+    </header>
+    <main class="container">
+        <div class="event-info">
+            <h2>Event Details</h2>
+            <ul>
+                <li>Date: 2026-06-15</li>
+                <li>Location: FutureWeb Conference Center</li>
+                <li>Speakers: Jane Doe, John Smith, Isaac Newton</li>
+            </ul>
+            <img src="images/logo.jpg" alt="A logo of the the company">
+        </div>
+
+        <div class="registration-form">
+            <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend>Attendee Details</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"
+                            placeholder="Enter your name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"
+                            placeholder="your.email@example.com" required>
+
+                    <label for="date">Date of arrival:</label>
+                    <input type="date" id="date" name="date" required>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Session Preferences</legend>
+                    <select name="Track Selection">
+                        <optgroup label="Frontend"></optgroup>
+                        <optgroup label="Backend"></optgroup>
+                    </select>
+                    <label>Upload Resume/Portfolio</label>
+                    <input type="file" accept=".pdf,.docx">
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
