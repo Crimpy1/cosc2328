@@ -1,0 +1,37 @@
+<!-- HW6 – COSC 2328 – Professor McCurry
+     Implemented by: Gigi Kahlor -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW6 - Interactive Product Calculator</title>
+  <link rel="stylesheet" href="css/hw6.css">
+  <script defer src="js/hw6-script.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <h1>Product Order Calculator</h1>
+    </header>
+    <main class="container">
+        <form id="orderForm">
+            <legend>Order Details</legend>
+            <select id="product">
+                <option value="" disabled selected>select a product</option>
+                <option value="laptop">laptop</option>
+                <option value="tablet">tablet</option>
+                <option value="phone">phone</option>
+                <option value="monitor">monitor</option>
+            </select>
+            <input type="number" id="quantity" min="1" max="10" value="1">
+            <input type="text" id="discountCode">
+            <button type="submit">submit</button>
+        </form>
+
+        <div id="results" class="results-hidden">
+            <p id="resultText"></p>
+        </div>
+    </main>
+        <footer class="site-footer">Gigi Kahlor: COSC 2328</footer>
+        <noscript>Enable JavaScript to view interactive content.</noscript>
+</body>
