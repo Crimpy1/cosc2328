@@ -1,0 +1,70 @@
+/* HW7 – COSC 2328 – Professor McCurry
+   Implemented by: Gigi Kahlor */
+* {
+   margin: 0;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   background: linear-gradient(135deg, #76dc8c 0%, #417a94 100%);
+   min-height: 100vh;
+   padding: 20px;
+}
+
+#loadingMessage {
+   text-align: center;
+   font-size: 1.5rem;
+   color: white;
+   margin-top: 50px;
+}
+
+.error-message {
+   text-align: center;
+   font-size: 1.5rem;
+   color: #ff6b6b;
+   margin-top: 50px;
+}
+
+header {
+   text-align: center;
+   color: white;
+   margin-bottom: 30px;
+}
+
+header h1 {
+   font-size: 2.2rem;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header h2 {
+   font-size: 1.5rem;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+header h3 {
+   font-size: 1.2rem;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-card {
+   background: #fff;
+   border-radius: 14px;
+   padding: 18px;
+   text-align: center;
+   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+   transition: transform 0.2s ease;
+}
+
+
+.alert {
+   background: #ff6b6b;
+   color: white;
+   padding: 12px;
+   border-radius: 8px;
+   text-align: center;
+   font-weight: bold;
+   margin: 16px 0;
+}
+
