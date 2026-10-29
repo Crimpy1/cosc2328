@@ -1,5 +1,21 @@
 // IC17 – COSC 2328 – Professor McCurry
 // Implemented by: Gigi Kahlor
+/*
+1) What does useState return? Name both things and describe what each one does.
+It returns two values. The state value, which is what the current state of the variable is and the variable that contains function to set the state.
+
+2) Why do you write onClick={feedPet} instead of onClick={feedPet()}?
+Because feedPet is an anonymous function that is created on click
+
+3) After you click Feed, what causes the Hunger number on the screen to update?
+feedPet's setHunger changes it.
+
+4) Trace through getPetMood() with hunger = 40 and energy = 80. Which condition matches first? What does the function return?
+hunger's condition matches first because it is checked first. If energy causes a change, then it is because it came after. The function should return thriving
+
+4) What is the difference between {hunger > 80 && <p>...</p>} and putting the same logic inside getPetMood()? When is each approach the right choice?
+I'm confused because we did not do this on the in-class assignment, so I don't know what I am comparing.
+*/
 
 
 // Debug: confirm CDN scripts loaded before any JSX runs
