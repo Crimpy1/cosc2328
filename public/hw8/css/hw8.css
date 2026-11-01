@@ -1,0 +1,137 @@
+/* HW8 – COSC 2328 – Professor McCurry
+   Implemented by: Gigi Kahlor */
+
+* {
+    font-family: 'Inter', sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: rgb(91, 119, 88);
+}
+.app-container {
+    padding: auto;
+    border: solid white;
+    background-color: rgba(206, 232, 206, 0.5);
+    border-radius: 10px;
+}
+
+.form-area {
+    background-color: rgba(144, 164, 144, 0.5);
+    border-radius: 10px;
+
+}
+
+.task-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 10px;
+    border: none;
+    background-color:white;
+    border-radius: 15px;
+}
+.task-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid rgb(220, 221, 220);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(144, 144, 144, 0.2);
+
+}
+
+.task-card .low {
+    color:darkolivegreen;
+}
+
+.badge.low {
+    border: none;
+    background-color:rgb(114, 239, 122, 0.415);
+    color: #12d612;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.task-card .medium {
+    color:darkgoldenrod;
+}
+
+.badge.medium {
+    border: none;
+    background-color:rgba(243, 191, 124, 0.415);
+    color: rgb(241, 165, 0);
+    border-radius: 20px;
+    width: fit-content;
+}
+.task-card .high {
+    color:#b74a58
+}
+.badge.high {
+
+    border: none;
+    background-color:rgb(228, 116, 116, 0.41);
+    color: rgb(192, 52, 52);
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.error-message {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(220, 221, 220);
+    background-color:rgb(255, 255, 255);
+    border-radius: 5px;
+} 
+select {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(220, 221, 220);
+    background-color:rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+
+.add-task {
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color:rgb(96, 134, 96);
+    border-radius: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.clear-all {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid rgb(220, 221, 220);
+    background-color:rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.task-card .delete-button {
+    background-color: #f8eff0;
+    color: #b74a58;
+    border: none;
+    border-radius: 8px;
+    width: 30px;
+    height: 30px;
+}
