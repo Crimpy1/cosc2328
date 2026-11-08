@@ -3,10 +3,14 @@
 
 /*
 What does express.json() do, and what would happen to req.body in your POST route without it?
+It parses incoming JSON request bodies and makes the parsed data available on req.body. 
+req.body becomes undefined in the POST route.
 
 What is the difference between HTTP status 200 and 201? When would you use each?
+200 is a general success status code, while 201 indicates that a new resource has been created succesfully.
 
 Your seed missions disappear every time the Docker container restarts. What would you need to add to make them persist?
+You would need to add a Docker volume to make the data stay in the container or a file outside of the container.
 
 If two people in different browser tabs both added missions at the same time, would they both see the same list? Why or why not?
 
