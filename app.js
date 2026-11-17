@@ -26,7 +26,9 @@ app.get('/ic19/config', (req, res) => {                  // NEW — IC19: GET ro
   });
 });
 
-app.use("/ic20", require("./routes/ic20-routes"));
+app.use("/ic20", require("./routes/ic20-routes"));      // NEW - IC20: mount ic20 router
+
+app.use("/ic22", require("./routes/ic22-routes"));      // NEW - IC22: mount ic22 router
 
 app.use('/hw9', require('./routes/hw9-routes'));  // NEW — HW9: mount hw9 router
 
