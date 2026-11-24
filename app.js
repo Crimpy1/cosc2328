@@ -7,11 +7,22 @@ const app     = express();                               // create the Express a
 // const PORT    = 3000;                                    // the port your browser connects to
 const PORT    = process.env.PORT || 3000;               // NEW — IC19: use PORT from .env, fall back to 3000
 
+const cookieParser = require('cookie-parser');    // ADD - IC24
+const session      = require('express-session');  // ADD - IC24
+
 app.use(express.json());
 
-app.use(express.urlencoded({ extended: true }));
-
 app.use(express.static(path.join(__dirname, "public"))); // serve every file in public/ as a static file
+
+app.use(express.urlencoded({ extended: true }));    // ADD - IC24
+
+app.use(cookieParser());  // ADD -IC24
+app.use(session({                 // ADD -IC24
+  secret: 'ic24-secret-key',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { httpOnly: true, maxAge: 1000 * 60 * 60 }
+}));
 
 // IC19 — mission status route
 app.get('/ic19/status', (req, res) => {                  // NEW — IC19: GET route, responds with plain text
@@ -34,9 +45,11 @@ app.use("/ic22", require("./routes/ic22-routes"));      // NEW - IC22: mount ic2
 
 app.use("/ic23", require("./routes/ic23-routes"));      // NEW - IC23: mount ic23 router
 
-app.use('/hw9', require('./routes/hw9-routes'));  // NEW — HW9: mount hw9 router
+app.use("/ic24", require("./routes/ic24-routes"));      // NEW - IC24: mount ic24 router
 
-app.use('/hw10', require('./routes/hw10-routes'));  // NEW — HW10: mount hw10 router
+app.use('/hw9', require('./routes/hw9-routes'));        // NEW — HW9: mount hw9 router
+
+app.use('/hw10', require('./routes/hw10-routes'));      // NEW — HW10: mount hw10 router
 
 app.listen(PORT, "0.0.0.0", () =>                        // 0.0.0.0 makes the server reachable from the droplet
   console.log(`Running on http://localhost:${PORT}`)
